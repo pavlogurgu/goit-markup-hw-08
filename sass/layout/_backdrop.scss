@@ -1,0 +1,280 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .modal {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background: var(--main-background);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+  }
+  .backdrop.is-hidden > .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, background-color;
+  }
+  .modal > .backdrop.is-hidden {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  .close-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background: var(--main-background);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+  
+ 
+  
+
+  
+  .modal-title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-name);
+    margin-bottom: 12px;
+  }
+  
+  .modal-input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  
+    padding-left: 42px;
+    background-color: transparent;
+    position: relative;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  
+    cursor: pointer;
+    fill: var(--title-name);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color;
+  }
+  
+  .modal-input-title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+  
+    letter-spacing: 0.01em;
+    color: var(--title-text);
+    cursor: pointer;
+    position: relative;
+  
+    display: block;
+    
+    
+  }
+  .modal-input-title + .modal-input-title {
+    margin-top: 10px;
+  }
+  .modal-input-comment-title{
+    margin-bottom: 20px;
+  }
+  
+  .input-wrap {
+    position: relative;
+  }
+  
+  .modal-input-comment {
+    height: 120px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  
+    left: 0;
+    top: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    resize: none;
+    cursor: pointer;
+    padding: 12px 16px 12px 16px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color;
+  }
+  .modal-input-comment::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  
+  .modal-lic-terms {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+  
+  .modal-button-send {
+    background: var(--accent-color);
+  
+    border-radius: 4px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+    display: block;
+    letter-spacing: 0.06em;
+    color: var(--white-text);
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow, background-color;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .modal-button-send:hover,
+  .modal-button-send:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background: var(--modal-button-send-accent);
+  }
+  
+  .input-wrap-comment {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-icon {
+    left: 12px;
+    cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+    transform: translateY(-50%);
+    top: 50%;
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .modal-input:focus,
+  .modal-input:hover,
+  .modal-input-comment:focus,
+  .modal-input-comment:hover {
+    border-color: var(--accent-color);
+  
+    outline: none;
+  }
+  
+  .modal-input:focus + .input-icon {
+    fill: var(--accent-color);
+  }
+  .modal-input:hover + .input-icon {
+    fill: var(--accent-color);
+  }
+  
+  .modal-confirm-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .modal-confirm-text::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-name);
+    border-radius: 2px;
+    margin-right: 7px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+  }
+  
+  .modal-confirm {
+    margin-bottom: 30px;
+  }
+  
+  .modal-confirm:focus + .modal-confirm-text::before {
+    border-color: var(--accent-color);
+  }
+  
+  .modal-confirm:checked + .modal-confirm-text::before {
+    background-color: var(--accent-color);
+    border: transparent;
+    background-image: url(../images/backdrop-check.svg);
+    background-position: center;
+    background-size: contain;
+  }
+  
+  .input-wrap-confirm {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  

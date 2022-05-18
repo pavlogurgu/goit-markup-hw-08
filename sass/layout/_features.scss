@@ -1,0 +1,64 @@
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+  
+    color: var(--title-name);
+    margin-bottom: 50px;
+  }
+
+  
+
+  
+  
+  
+  .features{
+    display: flex;
+    &__icon {
+      display: flex;
+    
+      width: 270px;
+      height: 120px;
+      background-color: var(--team-backround);
+      border-radius: 4px;
+      margin-bottom: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+    &__item + &__item {
+      margin-left: 30px;
+    }
+    & li {
+      display: block;
+      width: 270px;
+    }
+  }
+  
+  
+  
+  
+  
+  .pre-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--title-name);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .pre-title-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    /* or 171% */
+  
+    letter-spacing: 0.03em;
+  
+    color: var(--title-text);
+    display: block;
+  }

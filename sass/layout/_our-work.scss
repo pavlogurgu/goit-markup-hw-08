@@ -1,0 +1,38 @@
+.section-three {
+    background-color: var(--main-background);
+    padding-bottom: 94px;
+  }
+  .our-work {
+    display: inline-flex;
+  
+    justify-content: space-between;
+    &__image {
+      position: relative;
+    }
+    
+    &__cover {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 70px;
+      color: var(--white-text);
+      background: var(--our-work-cover);
+    }
+    & li:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  
+ 
