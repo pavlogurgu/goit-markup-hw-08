@@ -1,6 +1,12 @@
 .section-three {
     background-color: var(--main-background);
     padding-bottom: 94px;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    @media screen and (min-width: 1200px) {
+      
+    }
   }
   .our-work {
     display: inline-flex;
