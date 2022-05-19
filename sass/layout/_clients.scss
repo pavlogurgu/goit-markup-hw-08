@@ -1,29 +1,50 @@
 .clients-icons {
     display: flex;
-  
-
+    flex-wrap: wrap;
+    justify-content: center;
+    -webkit-box-pack: center;
+    margin-top: -30px;
+    margin-left: -30px;
   &__link {
-    display: flex;
-    width: 170px;
+    
+    width: auto;
     height: 92px;
     border: 1px solid var(--soc-icon);
     box-sizing: border-box;
     border-radius: 4px;
-  
+    display: flex;
     align-items: center;
     justify-content: center;
     fill: var(--soc-icon);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: border-color, fill;
+   
     &:hover,
     &:focus {
       fill: var(--accent-color);
       border-color: var(--accent-color);
     }
   }
-  &__item + &__item {
+ 
+  &__item {
+    margin-top: 30px;
     margin-left: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+    height: 92px;
+   
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 3 - 30px);
+      width: auto;
+
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 6 - 30px);
+      width: auto;
+      
+      
+    
+    }
   }
 }
   

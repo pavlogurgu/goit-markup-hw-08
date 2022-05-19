@@ -15,12 +15,22 @@
   
   
   .features{
-    display: flex;
-    
+    display: block;
+    margin-left: -30px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+     
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+ 
+    }
     &__icon {
       display: flex;
     
-      width: 270px;
+      width: 100%;
       height: 120px;
       background-color: var(--team-backround);
       border-radius: 4px;
@@ -28,13 +38,36 @@
       align-items: center;
       justify-content: center;
     }
-    &__item + &__item {
+    & > &__item {
+      
+      flex-basis: calc(100% - 30px);
       margin-left: 30px;
-    }
-    & li {
-      display: block;
-      width: 270px;
-    }
+      margin-bottom: 30px;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+       
+        flex-basis: calc(100% / 2 - 30px);
+        margin-left: 30px;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: 1200px) {
+        
+      flex-basis: calc(100% / 4 - 30px);
+      margin-left: 30px;
+      }
+      &__item {
+        width: 100%;
+        @media screen and (min-width: 768px) {
+         
+          width: calc(100% / 2 - 30px);
+          
+        }
+        @media screen and (min-width: 1200px) {
+          
+        width: calc(100% / 4 - 30px);
+        }
+        }
+       
   }
   
   
@@ -63,3 +96,4 @@
     color: var(--title-text);
     display: block;
   }
+}

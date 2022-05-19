@@ -3,8 +3,9 @@
   }
   .buttons-portfolio {
     display: flex;
-  
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    margin-top: -15px;
     justify-content: center;
     & li:not(:last-child) {
       margin-right: 8px;
@@ -18,7 +19,7 @@
     
       text-align: center;
       letter-spacing: 0.03em;
-    
+      margin-top: 15px;
       color: var(--title-name);
       display: block;
       border-radius: 4px;
@@ -59,21 +60,44 @@
   }
   
   .our-portfolio {
-    display: flex;
+    display: block;
     margin-left: -30px;
     margin-top: -30px;
-    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+     
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+ 
+    }
   }
   .our-portfolio > .portfolio-item {
-    flex-basis: calc(100% / 3 - 30px);
+      
+    flex-basis: calc(100% - 30px);
     margin-left: 30px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+     
+      flex-basis: calc(100% / 2 - 30px);
+     
+    }
+    @media screen and (min-width: 1200px) {
+      
+      flex-basis: calc(100% / 3 - 30px);
+    
+    }
   }
+
   
  
   .portfolio-item {
     &__link {
       display: block;
+      width: auto;
       text-decoration: none;
       font-style: normal;
       transition-duration: 250ms;
@@ -85,11 +109,7 @@
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-    .our-portfolio > & {
-      flex-basis: calc(100% / 3 - 30px);
-      margin-left: 30px;
-      margin-top: 30px;
-    }
+  
     &:hover &__cover-text {
       transform: translateY(0);
     }

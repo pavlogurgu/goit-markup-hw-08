@@ -1,8 +1,14 @@
 .section-team {
-
+  
     background: var(--team-backround);
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: auto;
+    
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
   .card-content {
     background-color: var(--main-background);
@@ -66,14 +72,48 @@
 
 
   .our-team {
-    display: flex;
+    display: block;
     margin-left: -30px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+     
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+ 
+    }
     & > &__member {
+      
+      flex-basis: calc(100% - 30px);
+      margin-left: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+       
+        flex-basis: calc(100% / 2 - 30px);
+        margin-left: 30px;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: 1200px) {
+        
       flex-basis: calc(100% / 4 - 30px);
       margin-left: 30px;
+      }
     }
     &__member {
-     
+      width: 100%;
+      @media screen and (min-width: 768px) {
+       
+        width: calc(100% / 2 - 30px);
+        
+      }
+      @media screen and (min-width: 1200px) {
+        
+      width: calc(100% / 4 - 30px);
+      
+      }
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
       border-radius: 0px 0px 4px 4px;
