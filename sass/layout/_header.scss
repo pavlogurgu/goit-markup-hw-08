@@ -17,9 +17,16 @@ body {
   .nav {
     display: flex;
     margin-right: auto;
+  
+ 
   }
   .menu-list {
-    display: flex;
+
+    display: none;
+    @media screen and (min-width: 768px)
+    {
+        display: flex;
+    }
     &__active-page {
       font-weight: 500;
       font-size: 14px;
@@ -36,6 +43,17 @@ body {
       height: 4px;
       border-radius: 2px;
       background-color: var(--accent-color);
+      @media screen and (max-width: 767px)
+      {
+          display: none;
+      }
+      @media screen and (min-width: 768px) and (max-width: 1199px)
+      {
+        bottom: 6%;
+      }
+      @media screen and (min-width: 1200px) {
+        bottom: -1%;
+      }
     }
     &__page-header {
       font-weight: 500;
@@ -48,20 +66,43 @@ body {
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-property: color;
     }
-  }
   
+  }
+ 
   .menu-list-nav {
-    display: flex;
+    display: block;
+   
     align-items: center;
     &__header-contacts:hover,
   &__header-contacts:focus {
     fill: var(--accent-color);
   }
-  
+  @media screen and (max-width: 767px)
+    {
+        display: none;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px)
+    {
+      display: block;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      margin: 0;
+     
+     
+      .contacts-position:not(:last-child){
+        margin-bottom: 10px;
+        
+      }
+     
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      .contacts-position:not(:last-child){
+        margin-bottom: 0;
+      }
+    }
   &__header-contacts {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    
     letter-spacing: 0.02em;
     align-items: center;
     color: var(--title-text);
@@ -70,16 +111,30 @@ body {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color, fill;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px)
+    {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
   &__header-contacts a:not(:last-child) {
     margin-right: 50px;
   }
   
-  &__header-contacts {
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
+  
     &:hover,
     &:focus {
     fill: var(--accent-color);
@@ -116,9 +171,20 @@ body {
     /* identical to box height */
   
     letter-spacing: 0.03em;
-    margin-right: 93px;
+    
     padding-top: 24px;
     padding-bottom: 25px;
+    @media screen and (max-width: 767px)
+    {
+      margin-right: 276px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px)
+    {
+      margin-right: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
   .logo-footer {
     display: flex;
@@ -146,5 +212,5 @@ body {
     border-bottom: 1px solid var(--border-one);
   }
   
-  
+
   
