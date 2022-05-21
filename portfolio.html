@@ -34,22 +34,74 @@
           <li><a href="" class="menu-list__page-header link">Контакти</a></li>
         </ul>
       </nav>
+      
         <ul class="menu-list-nav">
-          <li>
+          <li class="contacts-position">
             <a href="mailto:info@devstudio.com" class="menu-list-nav__header-contacts link">
               <svg class="mail-icon" width="16" height="12">
               <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
             </svg>info@devstudio.com</a>
           </li>
-          <li>
+          <li class="contacts-position">
             <a href="tel:+380961111111" class="menu-list-nav__header-contacts link">
               <svg class="phone-icon" width="10" height="16">
               <use href="./images/icons/symbol-defs.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a>
           </li>
         </ul>
+        <button type="button" class="burger-button">
+          <svg class="burger-icon" width="40" height="40">
+            <use href="./images/icons/symbol-defs.svg#burger-icon"></use>
+          </svg>
+        </button>
+        </div>
+        
+        
+        <div class="mob-menu is-hidden">
+          <button type="button" class="burger-button-close">
+            <svg class="burger-icon-close" width="40" height="40">
+              <use href="./images/icons/symbol-defs.svg#burger-icon-close"></use>
+            </svg>
+          </button>
+          
+          <div class="burger-container">
+            <div class="mob-menu-top">
+            <nav class="mobile-mav">
+            <ul class="mob-menu-list">
+              <li><a href="index.html" class="mob-menu-list__page-header link">Студія</a></li>
+              <li class="active"><a href="portfolio.html" class="link mob-menu-list__active-page">Портфоліо</a></li> 
+              <li><a href="" class="mob-menu-list__page-header link">Контакти</a></li>
+            </ul>
+            </nav>
+            </div>
+            <div class="mob-menu-bottom">
+            <div class="mob-contacts">
+            <ul class="mob-connect">
+              <li class="">
+                <a href="tel:+380961111111" class="mob-connect__phone link">
+                  +38 096 111 11 11</a>
+              </li>
+              <li class="">
+                <a href="mailto:info@devstudio.com" class="mob-connect__mail link">
+                  info@devstudio.com</a>
+              </li>
+            </ul>
+            </div>
+          
+
+            <div class="mob-soc">
+            <ul class="mob-soc-items">
+              <li><a href="" rel="noopener noreferrer" class="link mob-soc-item">Instagram</a></li>
+              <li><a href="" rel="noopener noreferrer" class="link mob-soc-item">Twitter</a></li>
+              <li><a href="" rel="noopener noreferrer" class="link mob-soc-item">Facebook</a></li>
+              <li><a href="" rel="noopener noreferrer" class="link mob-soc-item">LinkedIn</a></li>
+            </ul>
+            </div>
+            </div>
+          </div>
         </div>
     </header>
+
 
     <main class="main">
       <section class="section">
@@ -286,7 +338,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footers">
         <div class="footer-one">
@@ -366,6 +418,8 @@
       </div>
       </div>
       </div>
-    </footer>
+    </footer> -->
+    <script src="./js/modal.js"></script>
+      <script src="./js/menu.js"></script>
   </body>
 </html>
