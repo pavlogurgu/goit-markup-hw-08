@@ -84,14 +84,16 @@ body {
   @media screen and (min-width: 768px) and (max-width: 1199px)
   {
     display: block;
-    padding-top: 21px;
-    padding-bottom: 21px;
+   
     margin: 0;
    
    
     .contacts-position:not(:last-child){
       margin-bottom: 10px;
-      
+      padding-top: 21px;
+    }
+    .contacts-position:not(:first-child){
+      padding-bottom: 21px;
     }
    
   }
@@ -211,10 +213,16 @@ body {
 
 
 .burger-button{
+ 
+  justify-content: center;
+  align-items: center;
 background-color: transparent;
 border: none;
-display: block;
-margin-left: auto;
+display: flex;
+padding: 0;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: color, fill;
 @media screen and (min-width: 768px)
   {
     display: none;
@@ -222,7 +230,7 @@ margin-left: auto;
 
 
 }
-.burger-icon, .burger-icon-close{
+.burger-button, .burger-button-close{
 fill: var(--title-name);
 transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -233,6 +241,10 @@ fill: var(--accent-color);
 }
 
 .mob-menu{
+  @media screen and (min-width: 768px)
+  {
+    display: none;
+  }
 position: fixed;
 top: 0;
 left: 0;
@@ -241,6 +253,22 @@ min-height: 100%;
 min-width: 100%;
 z-index: 10;
 overflow: auto;
+
+
+-webkit-transition: opacity 300ms, visibility 300ms;
+transition: opacity 300ms, visibility 300ms;
+
+
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: opacity 300ms, visibility 300ms;
+  transition: opacity 300ms, visibility 300ms;
+}
+
+
 
 }
 .burger-container{
@@ -260,7 +288,9 @@ background-color: transparent;
 border: none;
 display: block;
 padding: 0;
-
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: color, fill;
 
 margin-top: 10px;
 margin-right: 15px;
@@ -277,7 +307,12 @@ font-weight: 500;
 font-size: 40px;
 line-height: 47px;
 letter-spacing: 0.02em;
-
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: color, fill;
+&:hover, &:focus{
+  color: var(--accent-color);
+  }
 &__active-page {
   color: var(--accent-color);
 }
@@ -306,7 +341,9 @@ flex-grow: 1;
 
 .mob-connect {
 
-
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, fill;
 
 & li:not(:last-child){
 margin-bottom: 32px;
@@ -336,9 +373,10 @@ color: var(--accent-color);
 }
 }
 .mob-soc{
-
+  color: var(--accent-color);
 }
 .mob-soc-items{
+  
 display: flex;
 flex-wrap: wrap;
 font-family: 'Roboto';
@@ -346,8 +384,6 @@ font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 22px;
-/* identical to box height, or 122% */
-
 letter-spacing: 0.02em;
 color: var(--accent-color);
 }
@@ -358,7 +394,8 @@ flex-basis: auto;
 
 }
 .mob-soc-item{
-
+  text-decoration: none;
+  color: var(--accent-color);
 
 }
 .mob-soc-items li:not(:last-child){
