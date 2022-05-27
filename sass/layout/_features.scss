@@ -17,6 +17,13 @@
   .features{
     display: block;
     margin-left: -30px;
+    
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
@@ -44,6 +51,7 @@
       @media screen and (max-width: 767px) {
       
       margin-bottom: 30px;
+      margin-left: 30px;
       width: 100%;
       }
       
