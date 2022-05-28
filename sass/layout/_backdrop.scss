@@ -29,7 +29,7 @@
     @media screen and (min-width: 480px) and (max-width: 1199px)
     {
       width: 450px;
-      height: 581px;
+      
     }
    
     @media screen and (min-width: 1200px) {
@@ -170,19 +170,7 @@
     color: rgba(117, 117, 117, 0.5);
   }
   
-  .modal-lic-terms {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: var(--accent-color);
-    text-decoration: underline;
-  }
+
   
   .modal-button-send {
     background: var(--accent-color);
@@ -248,17 +236,7 @@
     fill: var(--accent-color);
   }
   
-  .modal-confirm-text {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
+
   
   .modal-confirm-text::before {
     content: "";
@@ -291,5 +269,32 @@
   .input-wrap-confirm {
     position: relative;
     margin-bottom: 30px;
+    display: flex;
+  
+  }
+  .modal-confirm-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+  }
+  .modal-lic-terms {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--accent-color);
+    text-decoration: underline;
   }
   

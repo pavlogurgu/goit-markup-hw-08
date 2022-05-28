@@ -76,6 +76,14 @@ body {
   transition-property: color;
 }
 
+.header-contacts-tel {
+  padding-bottom: 21px;
+}
+
+.header-contacts-mail {
+  padding-top: 21px;
+}
+
 .menu-list-nav {
   display: block;
   -webkit-box-align: center;
@@ -97,10 +105,6 @@ body {
   }
   .menu-list-nav .contacts-position:not(:last-child) {
     margin-bottom: 10px;
-    padding-top: 21px;
-  }
-  .menu-list-nav .contacts-position:not(:first-child) {
-    padding-bottom: 21px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -133,7 +137,6 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .menu-list-nav__header-contacts {
     display: block;
-    padding: 0;
     margin: 0;
     font-weight: 500;
     font-size: 12px;
@@ -386,6 +389,12 @@ body {
   line-height: 28px;
   letter-spacing: 0.02em;
   color: var(--title-text);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-property: color;
+  transition-property: color;
 }
 .mob-connect__phone {
   font-family: "Roboto";
@@ -394,6 +403,12 @@ body {
   font-size: 34px;
   line-height: 40px;
   /* identical to box height */
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-property: color;
+  transition-property: color;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
@@ -504,6 +519,11 @@ body {
     padding-top: 200px;
     width: 100%;
     height: 600px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .hero {
+    width: 1600px;
   }
 }
 .hero__hero-text {
@@ -1177,7 +1197,6 @@ body {
 }
 
 .footer-email {
-  margin-bottom: 20px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-sizing: border-box;
@@ -1354,7 +1373,6 @@ body {
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 450px;
-    height: 581px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1521,26 +1539,6 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-lic-terms {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
 .modal-button-send {
   background: var(--accent-color);
   border-radius: 4px;
@@ -1619,24 +1617,6 @@ body {
   fill: var(--accent-color);
 }
 
-.modal-confirm-text {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-}
-
 .modal-confirm-text::before {
   content: "";
   width: 16px;
@@ -1671,6 +1651,47 @@ body {
 .input-wrap-confirm {
   position: relative;
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-confirm-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.modal-lic-terms {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .main {
