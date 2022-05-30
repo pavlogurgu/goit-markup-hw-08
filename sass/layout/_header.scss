@@ -11,7 +11,7 @@ body {
 }
 .header {
   background: var(--main-background);
-  height: 80px;
+ 
 }
 
 .nav {
@@ -49,7 +49,7 @@ body {
     }
     @media screen and (min-width: 768px) and (max-width: 1199px)
     {
-      bottom: 6%;
+      bottom: -1%;
     }
     @media screen and (min-width: 1200px) {
       bottom: -1%;

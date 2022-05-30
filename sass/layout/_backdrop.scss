@@ -240,6 +240,7 @@
   
   .modal-confirm-text::before {
     content: "";
+    display: inline-block;
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-name);
@@ -278,7 +279,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -290,7 +291,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     cursor: pointer;

@@ -10,7 +10,6 @@ body {
 
 .header {
   background: var(--main-background);
-  height: 80px;
 }
 
 .nav {
@@ -54,7 +53,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .menu-list__active-page::after {
-    bottom: 6%;
+    bottom: -1%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1619,6 +1618,7 @@ body {
 
 .modal-confirm-text::before {
   content: "";
+  display: inline-block;
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-name);
@@ -1662,9 +1662,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1680,9 +1678,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
